@@ -43,7 +43,7 @@ const projects = [
   },
   {
     id: 4,
-    image: "https://via.placeholder.com/300x200.png?text=Project+3", // Replace with actual image URL
+    image: bari, // Replace with actual image URL
     title: "Nova Website",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, excepturi facilis.",
