@@ -34,9 +34,9 @@ const ContactUsForm = () => {
 
   return (
     <section className="py-12">
-      <div className="mx-auto px-6 max-w-4xl">
+      <div className="mx-auto px-6 max-w-5xl">
         <div className="flex md:flex-row flex-col mb-8 text-center">
-          <div className="w-1/2">
+          <div className="w-full">
             <h2 className="font-bold text-3xl text-gray-900">
               Let's Work <span className="text-red-500">Together</span>
             </h2>
@@ -44,9 +44,9 @@ const ContactUsForm = () => {
               Have questions? We'd love to hear from you.
             </p>
           </div>
-          <div className="border rounded-full w-1/2">
+          {/* <div className="border rounded-full w-1/2">
             <img className="border w-full" src="" alt="" />
-          </div>
+          </div> */}
         </div>
 
         <form

@@ -7,25 +7,24 @@ import { Link } from "react-router-dom";
 import Framer from "../components/FadeInSection";
 import FadeInSection from "../components/FadeInSection";
 import Skills from "../components/AboutMe/Skills";
+import ContactUs from "./ContactUs";
 
 const Home = () => {
   return (
     <div className="bg-base-100">
       <Hero />
       <AboutMe />
+
+      <Skills />
+      <LatestProjects />
       <FadeInSection>
         <MyServices />
       </FadeInSection>
-      <Skills />
-      <LatestProjects />
-
       <div className="space-y-5 mx-auto py-10 w-6/12 text-center">
         <h1 className="font-bold text-4xl">
           Prepare to turn your ideas into reality? I am here to help
         </h1>
-        <Link to="/contact" className="btn btn-primary">
-          Contact Me
-        </Link>
+        <ContactUs />
       </div>
     </div>
   );

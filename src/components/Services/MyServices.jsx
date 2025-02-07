@@ -1,4 +1,5 @@
 import ServicesCard from "./ServicesCard";
+import { Fade } from "react-awesome-reveal";
 
 // Main Component
 const MyServices = () => {
