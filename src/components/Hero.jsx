@@ -21,12 +21,12 @@ const Hero = () => {
     <section className="flex lg:flex-row flex-col justify-center items-center mx-auto py-10 md:py-16 w-10/12">
       {/* Left Section */}
       <div className="flex-1 text-center lg:text-left">
-        <p className="mb-2 font-bold text-primary text-sm uppercase tracking-wide">
+        <p className="mb-2 font-bold text-3xl text-primary uppercase tracking-wide">
           Frontend Developer(React)
         </p>
 
         <Fade
-          className="mb-4 font-extrabold text-4xl md:text-5xl"
+          className="mb-4 font-extrabold text-xl md:text-2xl"
           delay={1e3}
           cascade
           damping={0.2}
@@ -38,8 +38,10 @@ const Hero = () => {
         </Fade>
 
         <p className="mb-6 text-base-content text-sm md:text-base">
-          Brief description with insights into myself, my vocational journey,
-          and what I engage in professionally.
+          I am a Front-End Developer proficient in JavaScript and React, with
+          backend experience in Node.js and MongoDB. Passionate about
+          innovation, I create user-focused web solutions and embrace continuous
+          learning.
         </p>
 
         {/* Buttons */}
@@ -101,22 +103,22 @@ const Hero = () => {
         {/* Image */}
         <img
           src={tarek}
-          alt="Ryan Davis"
-          className="relative top-2 right-10 z-10 rounded-full w-[200px] lg:w-[300px]"
+          alt="Shoriful Islam Tarek"
+          className="relative top-2 right-10 z-10 rounded-full w-[300px]"
         />
 
         {/* Info Boxes */}
         <div className="top-16 right-0 z-20 absolute flex flex-col gap-6 lg:gap-8 transform translate-x-16">
           <div className="bg-base-200 shadow-md p-4 rounded-lg text-center">
-            <p className="font-bold text-primary text-xl">2</p>
-            <p className="text-sm">Years of Experience</p>
+            <p className="font-bold text-primary text-xl">1</p>
+            <p className="text-sm">Year of Experience</p>
           </div>
           {/* <div className="left-0 z-30 absolute bg-base-200 shadow-md p-4 rounded-lg text-center">
             <p className="font-bold text-primary text-xl">5k</p>
             <p className="text-sm">Finished Projects</p>
           </div> */}
           <div className="bg-base-200 shadow-md p-4 rounded-lg text-center">
-            <p className="font-bold text-primary text-xl">7k</p>
+            <p className="font-bold text-primary text-xl">1k</p>
             <p className="text-sm">Happy Clients</p>
           </div>
         </div>

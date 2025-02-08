@@ -15,7 +15,7 @@ const AboutMe = () => {
 
       <div className="flex lg:flex-row flex-col items-start gap-5">
         {/* Left Section: Profile Image */}
-        <div className="flex justify-center items-center w-full md:w-1/3">
+        <div className="md:flex justify-center items-center hidden w-full md:w-1/3">
           <div className="relative mx-auto lg:w-64 h-48 lg:h-64">
             <div className="absolute bg-primary/10 rounded-full w-full h-full"></div>
             <img
@@ -31,9 +31,9 @@ const AboutMe = () => {
           {/* Tabs */}
 
           <Tabs forceRenderTabPanel>
-            <TabList>
+            <TabList className={"md:text-xl text-base font-bold text-gray-500"}>
               <Tab>Personal Info</Tab>
-              <Tab>Qualificaitons</Tab>
+              <Tab>Educational Qualificaitons</Tab>
               {/* <Tab>Skills</Tab> */}
             </TabList>
 

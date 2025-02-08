@@ -1,19 +1,29 @@
+import { Link } from "react-router-dom";
+
 // Reusable ProjectCard Component
-const AllProjectCard = ({ image, title, description, tag }) => {
+const AllProjectCard = ({ project }) => {
+  // console.log(project);
   return (
-    <div className="shadow-lg p-4 rounded-lg">
-      <div className="relative">
+    <div className="bg-white shadow-lg p-4 border rounded-xl">
+      <div className="relative border h-[200px]">
         <img
-          src={image}
-          alt={title}
-          className="rounded-lg w-full h-40 object-cover"
+          src={project.image}
+          alt={project.title}
+          className="rounded-lg w-full h-full object-cover"
         />
         <span className="top-3 left-3 absolute bg-red-500 px-3 py-1 rounded-full font-bold text-white text-xs">
-          {tag}
+          {project.tag}
         </span>
       </div>
-      <h3 className="mt-4 font-semibold text-gray-900 text-lg">{title}</h3>
-      <p className="mt-2 text-gray-600">{description}</p>
+      <h3 className="mt-4 font-bold text-gray-800 text-xl">{project.title}</h3>
+      <p className="mt-2 text-gray-600">{project.description}</p>
+      <Link
+        state={project}
+        to={`/projects/${project.id}`}
+        className="bg-blue-500 hover:bg-blue-600 my-2 px-4 py-2 rounded-xl text-white transition btn"
+      >
+        Details
+      </Link>
     </div>
   );
 };
