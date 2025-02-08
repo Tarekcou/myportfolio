@@ -1,10 +1,18 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Download } from "lucide-react";
 import ThemeProvider from "../provider/ThemeProvider";
 import logo from "../assets/logo.png";
+
 const Navbar = () => {
   const { theme, toggleTheme, isDark } = ThemeProvider();
-  // const isDark = theme === "dark";
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf"; // Ensure the PDF is in the public folder
+    link.download = "My_Resume.pdf";
+    link.click();
+  };
 
   const navMenu = (
     <>
@@ -13,6 +21,7 @@ const Navbar = () => {
       <NavLink to={"/contact"}>Contact</NavLink>
     </>
   );
+
   return (
     <div className="mx-auto w-11/12 md:w-10/12 navbar">
       <div className="navbar-start">
@@ -41,16 +50,25 @@ const Navbar = () => {
           </ul>
         </div>
         <Link to="/" className="text-xl btn btn-ghost">
-          <img className="rounded-full w-6 h-6" src={logo} /> Tarek
+          <img className="rounded-full w-6 h-6" src={logo} alt="Logo" /> Tarek
         </Link>
       </div>
 
       {/* Right menu */}
-      <div className="gap-10 navbar-end">
+      <div className="gap-4 navbar-end">
         {/* Menu tabs */}
         <div className="lg:flex hidden navbar-center">
           <ul className="gap-10 px-1 menu menu-horizontal">{navMenu}</ul>
         </div>
+
+        {/* Download Resume Button */}
+        <button
+          onClick={handleDownload}
+          className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-xl text-white transition duration-300"
+        >
+          <Download className="w-5 h-5" />
+          Resume
+        </button>
 
         {/* Theme Control */}
         <label className="swap-rotate btn btn-circle btn-ghost swap">
@@ -59,7 +77,7 @@ const Navbar = () => {
             className="theme-controller"
             value="synthwave"
             checked={isDark}
-            onChange={toggleTheme} // Sync with React state
+            onChange={toggleTheme}
           />
 
           {/* sun icon */}

@@ -13,7 +13,7 @@ const projects = [
     title: "Tutor Finding Website",
     description:
       "The Tutor Finding React Application is a dynamic web platform designed to connect students with qualified tutors efficiently. It allows students to search for tutors based on subjects, expertise, location, and availability. The application is built using React for a responsive user interface, with seamless navigation and real-time updates.",
-    tag: "React JS",
+    tag: ["React JS", "Fullstack"], // Use an array for multiple tags
     link: "https://online-tutor-2c707.firebaseapp.com/",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     title: "Equipment Sports Website",
     description:
       "The Sports Equipment Buying React Application is an intuitive e-commerce platform designed to help users easily find, compare, and purchase sports equipment from various categories. Built with React, the application ensures a fast, responsive, and engaging user experience across all devices.",
-    tag: "React JS",
+    tag: ["React JS", "Fullstack"], // Use an array for multiple tags
     link: "https://equi-sports-295ba.web.app/",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     title: "BariBazar",
     description:
       "The BariBazar is a React Application is a modern, feature-rich platform designed to streamline the process of buying, renting, and managing properties such as plots and flats. It offers distinct roles for Admins, Agents, and Users, providing a comprehensive real estate marketplace with secure transactions and an intuitive interface.",
-    tag: "React JS",
+    tag: ["React JS", "Fullstack"], // Use an array for multiple tags
     link: "baribazar-9589d.web.app",
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     title: "Nova Website",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, excepturi facilis.",
-    tag: "Next JS",
+    tag: ["Next JS"],
   },
 ];
 
@@ -50,10 +50,11 @@ const AllProjectPage = () => {
 
   const categories = ["All Projects", "React JS", "Next JS", "Fullstack"];
 
-  const getFilteredProjects = (category) =>
-    category === "All Projects"
+  const getFilteredProjects = (category) => {
+    return category === "All Projects"
       ? projects
-      : projects.filter((project) => project.category === category);
+      : projects.filter((project) => project.tag.includes(category));
+  };
   return (
     <section className="mx-auto py-12 w-11/12 md:w-10/12">
       <div className="mx-auto px-4 max-w-6xl">

@@ -20,10 +20,7 @@ const Home = () => {
       <FadeInSection>
         <MyServices />
       </FadeInSection>
-      <div className="space-y-5 mx-auto py-10 w-6/12 text-center">
-        <h1 className="font-bold text-4xl">
-          Prepare to turn your ideas into reality? I am here to help
-        </h1>
+      <div className="space-y-2 mx-auto py-5 text-center">
         <ContactUs />
       </div>
     </div>

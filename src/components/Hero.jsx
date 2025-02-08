@@ -8,14 +8,21 @@ import {
 } from "react-icons/fa6";
 import tarek from "../assets/tarek.jpeg";
 import { Link } from "react-router-dom";
+import { Download } from "lucide-react";
 
 const Hero = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/resume.pdf"; // Ensure the PDF is in the public folder
+    link.download = "My_Resume.pdf";
+    link.click();
+  };
   return (
     <section className="flex lg:flex-row flex-col justify-center items-center mx-auto py-10 md:py-16 w-10/12">
       {/* Left Section */}
       <div className="flex-1 text-center lg:text-left">
         <p className="mb-2 font-bold text-primary text-sm uppercase tracking-wide">
-          Web Developer
+          Frontend Developer(React)
         </p>
 
         <Fade
@@ -37,19 +44,52 @@ const Hero = () => {
 
         {/* Buttons */}
         <div className="flex justify-center lg:justify-start items-center gap-4">
-          <Link to="/contact" className="rounded-full btn btn-md btn-primary">
+          <Link
+            to="/contact"
+            className="bg-blue-500 hover:bg-blue-600 rounded-xl text-white btn btn-md"
+          >
             Contact me
           </Link>
-          <button className="rounded-full btn btn-md btn-neutral btn-outline">
-            Download CV
+
+          <button
+            onClick={handleDownload}
+            className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-xl text-white transition duration-300 btn btn-md btn-neutral btn-outline"
+          >
+            <Download className="w-5 h-5" />
+            Resume
           </button>
         </div>
 
         <div className="flex gap-5 mt-5 text-gray-600">
-          <FaFacebookF />
-          <FaGithub />
-          <FaInstagram />
-          <FaWhatsapp />
+          <a
+            href="https://github.com/Tarekcou"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub className="text-xl hover:text-black cursor-pointer" />
+          </a>
+          <a
+            href="https://wa.me/01818424256"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaWhatsapp className="text-xl hover:text-green-500 cursor-pointer" />
+          </a>
+          <a
+            href="https://www.instagram.com/shoriful_tarek/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram className="text-xl hover:text-pink-500 cursor-pointer" />
+          </a>
+
+          <a
+            href="https://www.facebook.com/Tarekict/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebookF className="text-xl hover:text-blue-600 cursor-pointer" />
+          </a>
         </div>
       </div>
 
